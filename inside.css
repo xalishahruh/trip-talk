@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif !important;
+  background: #141414;
+  color: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.alert-strict {
+  width: 100%;
+  text-align: center;
+  color: #98989a;
+  padding: 12px 0;
+  font-size: 14px;
+}
+header {
+  width: 100%;
+  background: #1a1a1a;
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.logo > img {
+  width: 40px;
+  height: 40px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+}
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+ul > li > a {
+  color: #7e7e81;
+}
+.btn-link {
+  padding: 10px 14px;
+  background: #ffd11a;
+  color: #141414;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* section css */
+section {
+  padding: 80px 0;
+}
+
+.inside-subtitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #98989a;
+}
+.inside-date {
+  padding: 12px 16px;
+  background: #1a1a1a;
+  color: #ffd11a;
+  border: 3px solid #ffd11a;
+  border-radius: 48px;
+}
+.inside-title {
+  text-align: center;
+  margin: 12px 0;
+  font-weight: 500;
+  font-size: 44px;
+}
+.inside-image {
+  width: 1020px;
+  margin: 40px auto;
+  height: 600px;
+  position: relative;
+}
+.inside-image > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.inside-body {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.inside-body p {
+  line-height: 28px;
+  color: #7e7e81;
+}
+
+/* responsiveness css */
+@media (max-width: 1200px) {
+  .inside-title {
+    font-size: 38px;
+  }
+  .inside-image {
+    width: 720px;
+    height: 425px;
+  }
+  .container,
+  nav {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  nav {
+    max-width: 576px;
+  }
+  .inside-image {
+    width: 540px;
+    height: 320px;
+  }
+  .inside-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  nav {
+    max-width: 100%;
+  }
+  .container,
+  nav {
+    padding: 0 20px;
+  }
+  .inside-image {
+    width: 340px;
+    height: 200px;
+  }
+  .inside-title {
+    font-size: 20px;
+  }
+}

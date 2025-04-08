@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif !important;
+  background: #141414;
+  color: #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.alert-strict {
+  width: 100%;
+  text-align: center;
+  color: #98989a;
+  padding: 12px 0;
+  font-size: 14px;
+}
+header {
+  width: 100%;
+  background: #1a1a1a;
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.logo > img {
+  width: 40px;
+  height: 40px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+}
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+ul > li > a {
+  color: #7e7e81;
+}
+.btn-link {
+  padding: 10px 14px;
+  background: #ffd11a;
+  color: #141414;
+  border-radius: 10px;
+  font-size: 14px;
+}
+/* Landing Part css */
+.mylanding {
+  padding: 80px 0;
+}
+.landing-title {
+  font-size: 55px;
+  font-weight: 400;
+}
+.landing-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+.landing-text {
+  color: #7e7e81;
+  width: 50%;
+}
+
+/* section divider */
+.section-divider {
+  padding: 80px 0;
+  background: #262626;
+}
+.header-posts span {
+  background: #333333;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+.header-posts > h3 {
+  padding-top: 16px;
+  font-size: 44px;
+  font-weight: 400;
+}
+/* Cards Section */
+.cards-section {
+  padding: 60px 0;
+}
+.story-cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
+.card-wrapper {
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-wrapper::before,
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #262626;
+  z-index: 1;
+}
+.card-wrapper::after {
+  inline-size: 100vw;
+  block-size: 1px;
+  inset-inline-start: 0;
+  inset-block-start: calc(4px * -1);
+}
+.card-wrapper::before {
+  inline-size: 1px;
+  block-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: calc(2px * -1);
+}
+
+.card {
+  width: 340px;
+}
+.image {
+  position: relative;
+  width: 340px;
+  height: 200px;
+  object-fit: cover;
+}
+.image > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.card-subtitle {
+  background: #262626;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-top: 16px;
+  gap: 4px;
+}
+.card-subtitle h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-title {
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.read-more {
+  width: 150px;
+  margin-top: 16px;
+  height: 50px;
+  font-size: 16px;
+  border: 1px solid #262626;
+  background: transparent;
+  color: #98989a;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.read-more > svg {
+  width: 16px;
+  height: 16px;
+}
+.for-mobile {
+  display: none;
+}
+
+/* responsiveness css */
+@media (max-width: 1200px) {
+  .for-mobile {
+    display: inline;
+  }
+  .landing-box > .landing-title {
+    display: none;
+  }
+  .landing-text {
+    width: 100%;
+  }
+  .container,
+  nav {
+    max-width: 768px;
+  }
+  .story-cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+  }
+  .landing-title {
+    font-size: 38px;
+  }
+  .container,
+  nav {
+    max-width: 576px;
+  }
+  .header-posts > h3 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  nav {
+    max-width: 100%;
+  }
+  .container,
+  nav {
+    padding: 0 20px;
+  }
+}
